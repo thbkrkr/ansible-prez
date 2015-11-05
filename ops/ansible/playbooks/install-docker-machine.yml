@@ -1,0 +1,28 @@
+---
+- hosts: all
+  connection: local
+  gather_facts: false
+
+  tasks:
+    - debug: msg="docker-machine create -d generic 
+        	--generic-ssh-user {{ ansible_ssh_user }} 
+        	--generic-ssh-key  {{ ansible_ssh_private_key_file }}
+        	--generic-ip-address {{ ansible_ssh_host }}
+        		{{ inventory_hostname }}"
+      tags: debug
+
+    - name: Check docker-machine existance
+      shell: 
+        docker-machine ip {{ inventory_hostname }}
+      register: dm_present
+      failed_when: "'Host does not exist' in dm_present.stderr"
+      ignore_errors: yes
+
+    - name: Install docker-machine
+      shell:
+        docker-machine create -d generic 
+        	--generic-ssh-user {{ ansible_ssh_user }} 
+        	--generic-ssh-key  {{ ansible_ssh_private_key_file }}
+        	--generic-ip-address {{ ansible_ssh_host }}
+        		{{ inventory_hostname }}
+      when: dm_present|failed

@@ -1,0 +1,4 @@
+ops/ssh/admin.id_rsa
+ops/creds/.openrc-creds.sh
+ops/machines/*/machines/*/*.pem
+ops/machines/*/machines/*/id_rsa

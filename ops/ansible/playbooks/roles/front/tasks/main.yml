@@ -1,0 +1,14 @@
+---
+
+- name: Front | Run container
+  docker:
+    name: demo-front
+    image: krkr/demo-front
+    pull: always
+    state: reloaded
+    ports: 
+      - 80:80
+    env:
+      API_URL: "http://{{ hostvars[groups['ha-api-servers'][0]]['ansible_ssh_host'] }}"
+    restart_policy: always
+  tags: docker-run

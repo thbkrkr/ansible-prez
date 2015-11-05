@@ -1,0 +1,67 @@
+---
+
+- name: monitored | Install snmp packages
+  apt: name={{ item }} state=present
+  with_items:
+    - snmp
+    - snmpd
+    - python-pip
+  tags: apt
+
+- name: monitored | Install pip
+  pip: name={{ item }} extra_args="--upgrade"
+  with_items:
+    - pip
+    - virtualenv
+  tags: pip
+
+- name: monitored | Install httplib2 for uri module
+  pip: name=httplib2
+  tags: pip
+
+- name: monitored | Configure snmp client service
+  copy: src=snmp.conf dest=/etc/snmp/snmp.conf owner=root group=root mode=644
+  tags: snmpd-config
+
+- name: monitored | Configure default 
+  copy: src=snmpd dest=/etc/default/snmpd owner=root group=root mode=644
+  notify: restart snmpd
+  tags: snmpd-config
+
+- name: monitored | Configure snmp server service
+  template: src=snmpd.conf.j2 dest=/etc/snmp/snmpd.conf owner=root group=root mode=600
+  notify: restart snmpd
+  register: snmpd
+  tags: snmpd-config
+
+# Force to restart the service to allow librenms registration at the first execution of this role
+- name: monitored | Restart service
+  service: name=snmpd state=restarted
+  when: snmpd.changed
+
+- name: monitored | Check librenms machine registration
+  uri:
+    url: "{{ librenms_url }}/api/v0/devices/{{ inventory_hostname }}.{{ admin_dns_zone }}"
+    HEADER_X-Auth-Token: "{{ monitoring_api_token }}"
+  register: librenms
+  ignore_errors: yes
+  tags: librenms-register
+
+- name: monitored | Register machine to librenms
+  uri:
+    url: "{{ librenms_url }}//api/v0/devices"
+    method: POST
+    HEADER_X-Auth-Token: "{{ monitoring_api_token }}"
+    HEADER_Content-Type: "application/json"
+    # The body is considered as a dict if there is no variable with '| to_json'. A dummy field 'hack' is added just for that...
+    body: '{"hostname":"{{ inventory_hostname }}.{{ admin_dns_zone }}","community":"{{ monitoring_community }}","version":"v2c","hack": {{ true | to_json }}}'
+    status_code: "200,201"
+  when: librenms|failed
+  tags: librenms-register
+
+- name: monitored | Check librenms machine registration
+  uri:
+    url: "{{ librenms_url }}/api/v0/devices/{{ inventory_hostname }}.{{ admin_dns_zone }}"
+    HEADER_X-Auth-Token: "{{ monitoring_api_token }}"
+  when: librenms|failed
+  tags: librenms-register

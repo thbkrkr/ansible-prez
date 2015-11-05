@@ -1,0 +1,8 @@
+- hosts: ha-api-servers
+  sudo: yes
+  gather_facts: false
+
+  roles:
+    - { role: common/base, 			tags: ["common"] }
+    - { role: common/haproxy, 	tags: ["common", "haproxy"] }
+    - { role: ha-api, 					tags: ["haproxy", "ha-api"] }

@@ -1,0 +1,21 @@
+---
+- hosts: prez-servers
+  sudo: yes
+  gather_facts: false
+
+  roles:
+    - { role: common/base,      tags: ["common"] }
+    - { role: common/docker,    tags: ["common", "docker"] }
+    - { role: common/docker-py, tags: ["common", "docker"] }
+
+  tasks:
+    - name: Front | Run container
+      docker:
+        name: ansible-prez
+        image: krkr/ansible-prez
+        pull: always
+        state: reloaded
+        ports: 
+          - 80:80
+        restart_policy: always
+      tags: ["docker", "docker-run"]

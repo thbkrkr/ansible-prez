@@ -1,0 +1,10 @@
+---
+
+- name: start snmpd
+  service: name=snmpd state=started
+
+- name: restart snmpd
+  service: name=snmpd state=restarted
+
+- name: reload snmpd
+  service: name=snmpd state=reloaded

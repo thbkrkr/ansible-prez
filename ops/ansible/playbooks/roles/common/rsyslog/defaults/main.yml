@@ -1,0 +1,5 @@
+# Variables to set for this role
+
+#rsyslog_config_name:
+#rsyslog_filename_path:
+#rsyslog_remote_hostname:

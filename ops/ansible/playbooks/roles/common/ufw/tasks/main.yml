@@ -1,0 +1,14 @@
+---
+
+- name: ufw | Install ufw package
+  apt: name=ufw
+
+- name: ufw | Start service
+  ufw: state=enabled
+
+- name: ufw | Allow basic ports
+  ufw: rule=allow port={{ item }} proto=tcp
+  with_items:
+    - 22
+    - 80
+    - 2376

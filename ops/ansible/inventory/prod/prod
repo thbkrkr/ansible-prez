@@ -1,0 +1,15 @@
+
+[front-servers]
+prod-front-1
+
+[ha-api-servers]
+prod-ha-api-1
+
+[api-servers]
+prod-api-1
+prod-api-2
+
+[all:children]
+front-servers
+ha-api-servers
+api-servers

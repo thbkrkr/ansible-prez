@@ -1,0 +1,9 @@
+- hosts: api-servers
+  sudo: yes
+  gather_facts: true
+
+  roles:
+    - { role: common/base, 			tags: ["common"] }
+    - { role: common/docker, 		tags: ["common"] }
+    - { role: common/docker-py, tags: ["common"] }
+    - { role: api, 							tags: ["api"] }

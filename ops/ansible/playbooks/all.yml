@@ -1,0 +1,8 @@
+---
+
+- hosts: all
+  gather_facts: no
+
+- include : front-servers.yml
+- include : ha-api-servers.yml
+- include : api-servers.yml

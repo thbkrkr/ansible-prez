@@ -1,0 +1,9 @@
+- hosts: front-servers
+  sudo: yes
+  gather_facts: false
+
+  roles:
+    - { role: common/base, 			tags: ["common"] }
+    - { role: common/docker, 		tags: ["common"] }
+    - { role: common/docker-py, tags: ["common"] }
+    - { role: front, 						tags: ["front"] }

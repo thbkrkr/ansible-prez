@@ -1,0 +1,9 @@
+---
+
+- name: ha-api | Configure haproxy
+  template: 
+    src=haproxy.cfg.j2
+    dest=/etc/haproxy/haproxy.cfg
+    owner=root mode=644
+  notify: reload haproxy
+  tags: haproxy-configure

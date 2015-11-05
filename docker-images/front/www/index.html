@@ -1,0 +1,142 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>demo-front</title>
+<link rel="stylesheet" href="//cdn.rawgit.com/yahoo/pure-release/v0.6.0/pure-min.css">
+
+<div class="main">
+  
+  <div class="header">
+    <h1><small>Hi Toulouse DevOps User Group!</small></h1>
+  </div>
+  
+  <div class="content">
+		<div class="data" id="data">
+		</div>
+    <center>
+      <a href="http://thecatapi.com">
+        <img class="pure-img-responsive img"
+        	src="https://thecatapi.com/api/images/get?format=src&type=jpg">
+      </a>
+    </center>
+  </div>
+
+  <div class="footer">
+    &copy;2015 krkr
+  </div>
+</div>
+
+</body>
+</html>
+
+<style>
+body {
+  color: #777;
+  font-family: 'Raleway', sans-serif;
+}
+
+.pure-img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+.main {
+  margin: 0 auto;
+  padding: 0 2em;
+}
+
+.content {
+  margin: 0 auto;
+  padding: 2em 1em;
+  max-width: 610px;
+  line-height: 1.6em;
+}
+
+.data {
+	padding: 20px;
+  max-width: 610px;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  color: #E91E63;
+  background-color: #F5F5F5;
+  margin-bottom: 20px
+}
+
+.img {
+  max-height: 400px;
+}
+
+.header {
+  margin: 0;
+  color: #333;
+  text-align: center;
+  padding: 1em 2em 1em;
+  border-bottom: 1px solid #eee;
+}
+
+.header h1 {
+  margin: 0.2em 0;
+  font-size: 3em;
+  font-weight: 300;
+  color: #444;
+}
+
+.footer {
+  border-top: 1px solid #eee;
+  text-align: center;
+  padding: 1em 2em;
+}
+
+/* spinner */
+.spinner {
+  width: 40px;
+  height: 40px;
+  background-color: #2196F3;
+
+  margin: 100px auto;
+  -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+  animation: sk-rotateplane 1.2s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-rotateplane {
+  0% { -webkit-transform: perspective(120px) }
+  50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+  100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+}
+
+@keyframes sk-rotateplane {
+  0% { 
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg) 
+  } 50% { 
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg) 
+  } 100% { 
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+</style>
+
+<script>
+// https://code.google.com/p/microajax/
+function microAjax(B,A){this.bindFunction=function(E,D){return function(){return E.apply(D,[D])}};this.stateChange=function(D){if(this.request.readyState==4){this.callbackFunction(this.request.responseText)}};this.getRequest=function(){if(window.ActiveXObject){return new ActiveXObject("Microsoft.XMLHTTP")}else{if(window.XMLHttpRequest){return new XMLHttpRequest()}}return false};this.postBody=(arguments[2]||"");this.callbackFunction=A;this.url=B;this.request=this.getRequest();if(this.request){var C=this.request;C.onreadystatechange=this.bindFunction(this.stateChange,this);if(this.postBody!==""){C.open("POST",B,true);C.setRequestHeader("X-Requested-With","XMLHttpRequest");C.setRequestHeader("Content-type","application/x-www-form-urlencoded");C.setRequestHeader("Connection","close")}else{C.open("GET",B,true)}C.send(this.postBody)}};
+
+function get(path, el) {
+  elId = el.replace('#', '');
+  var loader = setTimeout(function() {
+      console.log("loader");
+      document.getElementById(elId).innerHTML = '<div class="spinner"></div>';
+  }, 200);
+
+  microAjax(path, function(data) {
+    document.getElementById(elId).innerHTML = '<pre>' + 
+    	JSON.stringify(JSON.parse(data), null, 2) + '</pre>';
+    clearTimeout(loader);
+  });
+};
+
+var apiUrl = /* start:apiUrl */ 'http://localhost:81'; /* end:apiUrl */
+get(apiUrl + '/api/hostname', '#data')
+
+</script>

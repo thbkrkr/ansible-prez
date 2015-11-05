@@ -1,0 +1,452 @@
+a10_server (E) - Manage A10 Networks AX/SoftAX/Thunder/vThunder devices
+a10_service_group (E) - Manage A10 Networks devices’ service groups
+a10_virtual_server (E) - Manage A10 Networks devices’ virtual servers
+accelerate - Enable accelerated mode on remote node
+acl - Sets and retrieves file ACL information.
+add_host - add a host (and alternatively a group) to the ansible-playbook in-memory inventory
+airbrake_deployment (E) - Notify airbrake about app deployments
+alternatives (E) - Manages alternative programs for common commands
+apache2_module - enables/disables a module of the Apache2 webserver
+apk (E) - Manages apk packages
+apt - Manages apt-packages
+apt_key - Add or remove an apt key
+apt_repository - Add and remove APT repositories
+apt_rpm - apt_rpm package manager
+assemble - Assembles a configuration file from fragments
+assert - Fail with custom message
+async_status - Obtain status of asynchronous task
+at (E) - Schedule the execution of a command or script file via the at command.
+authorized_key - Adds or removes an SSH authorized key
+azure - create or terminate a virtual machine in azure
+bigip_facts (E) - Collect facts from F5 BIG-IP devices
+bigip_gtm_wide_ip (E) - Manages F5 BIG-IP GTM wide ip
+bigip_monitor_http (E) - Manages F5 BIG-IP LTM http monitors
+bigip_monitor_tcp (E) - Manages F5 BIG-IP LTM tcp monitors
+bigip_node (E) - Manages F5 BIG-IP LTM nodes
+bigip_pool (E) - Manages F5 BIG-IP LTM pools
+bigip_pool_member (E) - Manages F5 BIG-IP LTM pool members
+bigpanda (E) - Notify BigPanda about deployments
+boundary_meter (E) - Manage boundary meters
+bower (E) - Manage bower packages with bower
+bundler (E) - Manage Ruby Gem dependencies with Bundler
+bzr (E) - Deploy software (or files) from bzr branches
+campfire (E) - Send a message to Campfire
+capabilities (E) - Manage Linux capabilities
+circonus_annotation (E) - create an annotation in circonus
+clc_aa_policy (E) - Create or Delete Anti Affinity Policies at CenturyLink Cloud.
+clc_alert_policy (E) - Create or Delete Alert Policies at CenturyLink Cloud.
+clc_blueprint_package (E) - deploys a blue print package on a set of servers in CenturyLink Cloud.
+clc_firewall_policy (E) - Create/delete/update firewall policies
+clc_group (E) - Create/delete Server Groups at Centurylink Cloud
+clc_loadbalancer (E) - Create, Delete shared loadbalancers in CenturyLink Cloud.
+clc_modify_server (E) - modify servers in CenturyLink Cloud.
+clc_publicip (E) - Add and Delete public ips on servers in CenturyLink Cloud.
+clc_server (E) - Create, Delete, Start and Stop servers in CenturyLink Cloud.
+clc_server_snapshot (E) - Create, Delete and Restore server snapshots in CenturyLink Cloud.
+cloudformation - Create or delete an AWS CloudFormation stack
+cloudtrail (E) - manage CloudTrail creation and deletion
+command - Executes a command on a remote node
+composer (E) - Dependency Manager for PHP
+consul (E) - Add, modify & delete services within a consul cluster.
+consul_acl (E) - manipulate consul acl keys and rules
+consul_kv (E) - Manipulate entries in the key/value store of a consul cluster.
+consul_session (E) - manipulate consul sessions
+copy - Copies files to remote locations.
+cpanm (E) - Manages Perl library dependencies.
+cron - Manage cron.d and crontab entries.
+cronvar (E) - Manage variables in crontabs
+crypttab (E) - Encrypted Linux block devices
+cs_account (E) - Manages accounts on Apache CloudStack based clouds.
+cs_affinitygroup (E) - Manages affinity groups on Apache CloudStack based clouds.
+cs_domain (E) - Manages domains on Apache CloudStack based clouds.
+cs_facts (E) - Gather facts on instances of Apache CloudStack based clouds.
+cs_firewall (E) - Manages firewall rules on Apache CloudStack based clouds.
+cs_instance (E) - Manages instances and virtual machines on Apache CloudStack based clouds.
+cs_instancegroup (E) - Manages instance groups on Apache CloudStack based clouds.
+cs_ip_address (E) - Manages public IP address associations on Apache CloudStack based clouds.
+cs_iso (E) - Manages ISO images on Apache CloudStack based clouds.
+cs_loadbalancer_rule (E) - Manages load balancer rules on Apache CloudStack based clouds.
+cs_loadbalancer_rule_member (E) - Manages load balancer rule members on Apache CloudStack based clouds.
+cs_network (E) - Manages networks on Apache CloudStack based clouds.
+cs_portforward (E) - Manages port forwarding rules on Apache CloudStack based clouds.
+cs_project (E) - Manages projects on Apache CloudStack based clouds.
+cs_securitygroup (E) - Manages security groups on Apache CloudStack based clouds.
+cs_securitygroup_rule (E) - Manages security group rules on Apache CloudStack based clouds.
+cs_sshkeypair (E) - Manages SSH keys on Apache CloudStack based clouds.
+cs_staticnat (E) - Manages static NATs on Apache CloudStack based clouds.
+cs_template (E) - Manages templates on Apache CloudStack based clouds.
+cs_user (E) - Manages users on Apache CloudStack based clouds.
+cs_vmsnapshot (E) - Manages VM snapshots on Apache CloudStack based clouds.
+datadog_event (E) - Posts events to DataDog service
+datadog_monitor (E) - Manages Datadog monitors
+debconf (E) - Configure a .deb package
+debug - Print statements during execution
+digital_ocean - Create/delete a droplet/SSH_key in DigitalOcean
+digital_ocean_domain - Create/delete a DNS record in DigitalOcean
+digital_ocean_sshkey - Create/delete an SSH key in DigitalOcean
+django_manage - Manages a Django application.
+dnf (E) - Manages packages with the *dnf* package manager
+dnsimple (E) - Interface with dnsimple.com (a DNS hosting service).
+dnsmadeeasy (E) - Interface with dnsmadeeasy.com (a DNS hosting service).
+docker - manage docker containers
+docker_image - manage docker images
+dpkg_selections (E) - Dpkg package selection selections
+dynamodb_table (E) - Create, update or delete AWS Dynamo DB tables.
+easy_install - Installs Python libraries
+ec2 - create, terminate, start or stop an instance in ec2
+ec2_ami - create or destroy an image in ec2
+ec2_ami_copy (E) - copies AMI between AWS regions, return new image id
+ec2_ami_find - Searches for AMIs to obtain the AMI ID and other information
+ec2_ami_search (D) - Retrieve AWS AMI information for a given operating system.
+ec2_asg - Create or delete AWS Autoscaling Groups
+ec2_eip - associate an EC2 elastic IP with an instance.
+ec2_elb - De-registers or registers instances from EC2 ELBs
+ec2_elb_facts (E) - Gather facts about EC2 Elastic Load Balancers in AWS
+ec2_elb_lb - Creates or destroys Amazon ELB.
+ec2_eni (E) - Create and optionally attach an Elastic Network Interface (ENI) to an instance
+ec2_eni_facts (E) - Gather facts about ec2 ENI interfaces in AWS
+ec2_facts - Gathers facts about remote hosts within ec2 (aws)
+ec2_group - maintain an ec2 VPC security group.
+ec2_key - maintain an ec2 key pair.
+ec2_lc - Create or delete AWS Autoscaling Launch Configurations
+ec2_metric_alarm - Create/update or delete AWS Cloudwatch ‘metric alarms’
+ec2_remote_facts (E) - ask EC2 for information about other instances.
+ec2_scaling_policy - Create or delete AWS scaling policies for Autoscaling groups
+ec2_snapshot - creates a snapshot from an existing volume
+ec2_tag - create and remove tag(s) to ec2 resources.
+ec2_vol - create and attach a volume, return volume id and device map
+ec2_vpc - configure AWS virtual private clouds
+ec2_vpc_igw (E) - Manage an AWS VPC Internet gateway
+ec2_vpc_net - Configure AWS virtual private clouds
+ec2_vpc_route_table (E) - Manage route tables for AWS virtual private clouds
+ec2_vpc_route_table_facts (E) - Gather facts about ec2 VPC route tables in AWS
+ec2_vpc_subnet (E) - Manage subnets in AWS virtual private clouds
+ec2_vpc_subnet_facts (E) - Gather facts about ec2 VPC subnets in AWS
+ec2_win_password (E) - gets the default administrator password for ec2 windows instances
+ecs_cluster (E) - create or terminate ecs clusters
+ecs_task (E) - run, start or stop a task in ecs
+ecs_taskdefinition (E) - register a task definition in ecs
+ejabberd_user (E) - Manages users for ejabberd servers
+elasticache - Manage cache clusters in Amazon Elasticache.
+elasticache_subnet_group - manage Elasticache subnet groups
+elasticsearch_plugin (E) - Manage Elasticsearch plugins
+expect (E) - Executes a command and responds to prompts
+facter (E) - Runs the discovery program *facter* on the remote system
+fail - Fail with custom message
+fetch - Fetches a file from remote nodes
+file - Sets attributes of files
+filesystem (E) - Makes file system on block device
+find - return a list of files based on specific criteria
+fireball - Enable fireball mode on remote node
+firewalld (E) - Manage arbitrary ports/services with firewalld
+flowdock (E) - Send a message to a flowdock
+gc_storage - This module manages objects/buckets in Google Cloud Storage.
+gce - create or terminate GCE instances
+gce_img (E) - utilize GCE image resources
+gce_lb - create/destroy GCE load-balancer resources
+gce_net - create/destroy GCE networks and firewall rules
+gce_pd - utilize GCE persistent disk resources
+gce_tag (E) - add or remove tag(s) to/from GCE instance
+gem - Manage Ruby gems
+get_url - Downloads files from HTTP, HTTPS, or FTP to node
+getent (E) - a wrapper to the unix getent utility
+git - Deploy software (or files) from git checkouts
+github_hooks (E) - Manages github service hooks.
+glance_image (D) - Add/Delete images from glance
+gluster_volume (E) - Manage GlusterFS volumes
+group - Add or remove groups
+group_by - Create Ansible groups based on facts
+grove (E) - Sends a notification to a grove.io channel
+hall (E) - Send notification to Hall
+haproxy (E) - Enable, disable, and set weights for HAProxy backend servers using socket commands.
+hg - Manages Mercurial (hg) repositories.
+hipchat (E) - Send a message to hipchat.
+homebrew (E) - Package manager for Homebrew
+homebrew_cask (E) - Install/uninstall homebrew casks.
+homebrew_tap (E) - Tap a Homebrew repository.
+hostname - Manage hostname
+htpasswd - manage user files for basic authentication
+iam - Manage IAM users, groups, roles and keys
+iam_cert - Manage server certificates for use on ELBs and CloudFront
+iam_policy - Manage IAM policies for users, groups, and roles
+include_vars - Load variables from files, dynamically within a task.
+ini_file - Tweak settings in INI files
+iptables (E) - Modify the systems iptables
+irc (E) - Send a message to an IRC channel
+jabber (E) - Send a message to jabber user or chat room
+jboss (E) - deploy applications to JBoss
+jira (E) - create and modify issues in a JIRA instance
+kernel_blacklist (E) - Blacklist kernel modules
+keystone_user (D) - Manage OpenStack Identity (keystone) users, tenants and roles
+known_hosts (E) - Add or remove a host from the ``known_hosts`` file
+layman (E) - Manage Gentoo overlays
+librato_annotation (E) - create an annotation in librato
+lineinfile - Ensure a particular line is in a file, or replace an existing line using a back-referenced regular expression.
+linode - create / delete / stop / restart an instance in Linode Public Cloud
+lldp (E) - get details reported by lldp
+locale_gen (E) - Creates or removes locales.
+logentries (E) - Module for tracking logs via logentries.com
+lvg (E) - Configure LVM volume groups
+lvol (E) - Configure LVM logical volumes
+lxc_container (E) - Manage LXC Containers
+macports (E) - Package manager for MacPorts
+mail (E) - Send an email
+maven_artifact (E) - Downloads an Artifact from a Maven Repository
+modprobe (E) - Add or remove kernel modules
+mongodb_user (E) - Adds or removes a user from a MongoDB database.
+monit (E) - Manage the state of a program monitored via Monit
+mount - Control active and configured mount points
+mqtt (E) - Publish a message on an MQTT topic for the IoT
+mysql_db - Add or remove MySQL databases from a remote host.
+mysql_replication (E) - Manage MySQL replication
+mysql_user - Adds or removes a user from a MySQL database.
+mysql_variables - Manage MySQL global variables
+nagios (E) - Perform common tasks in Nagios related to downtime and notifications.
+netscaler (E) - Manages Citrix NetScaler entities
+newrelic_deployment (E) - Notify newrelic about app deployments
+nexmo (E) - Send a SMS via nexmo
+nmcli (E) - Manage Networking
+nova_compute (D) - Create/Delete VMs from OpenStack
+nova_keypair (D) - Add/Delete key pair from nova
+npm (E) - Manage node.js packages with npm
+ohai (E) - Returns inventory data from *Ohai*
+open_iscsi (E) - Manage iscsi targets with open-iscsi
+openbsd_pkg (E) - Manage packages on OpenBSD.
+openvswitch_bridge (E) - Manage Open vSwitch bridges
+openvswitch_db (E) - Configure open vswitch database.
+openvswitch_port (E) - Manage Open vSwitch ports
+opkg (E) - Package manager for OpenWrt
+os_auth - Retrieve an auth token
+os_client_config - Get OpenStack Client config
+os_floating_ip - Add/Remove floating IP from an instance
+os_image - Add/Delete images from OpenStack Cloud
+os_image_facts - Retrieve facts about an image within OpenStack.
+os_ironic - Create/Delete Bare Metal Resources from OpenStack
+os_ironic_node - Activate/Deactivate Bare Metal Resources from OpenStack
+os_keypair - Add/Delete a keypair from OpenStack
+os_network - Creates/removes networks from OpenStack
+os_networks_facts - Retrieve facts about one or more OpenStack networks.
+os_nova_flavor - Manage OpenStack compute flavors
+os_object - Create or Delete objects and containers from OpenStack
+os_port - Add/Update/Delete ports from an OpenStack cloud.
+os_router - Create or delete routers from OpenStack
+os_security_group - Add/Delete security groups from an OpenStack cloud.
+os_security_group_rule - Add/Delete rule from an existing security group
+os_server - Create/Delete Compute Instances from OpenStack
+os_server_actions - Perform actions on Compute Instances from OpenStack
+os_server_facts - Retrieve facts about a compute instance
+os_server_volume - Attach/Detach Volumes from OpenStack VM’s
+os_subnet - Add/Remove subnet to an OpenStack network
+os_subnets_facts - Retrieve facts about one or more OpenStack subnets.
+os_user - Manage OpenStack Identity Users
+os_user_group - Associate OpenStack Identity users and groups
+os_volume - Create/Delete Cinder Volumes
+osx_defaults (E) - osx_defaults allows users to read, write, and delete Mac OS X user defaults from Ansible
+osx_say (E) - Makes an OSX computer to speak.
+ovirt (E) - oVirt/RHEV platform management
+package - Generic OS package manager
+pacman (E) - Manage packages with *pacman*
+pagerduty (E) - Create PagerDuty maintenance windows
+pagerduty_alert (E) - Trigger, acknowledge or resolve PagerDuty incidents
+pam_limits (E) - Modify Linux PAM limits
+patch (E) - Apply patch files using the GNU patch tool.
+pause - Pause playbook execution
+pear (E) - Manage pear/pecl packages
+ping - Try to connect to host, veryify a usable python and return ``pong`` on success.
+pingdom (E) - Pause/unpause Pingdom alerts
+pip - Manages Python library dependencies.
+pkg5 (E) - Manages packages with the Solaris 11 Image Packaging System
+pkg5_publisher (E) - Manages Solaris 11 Image Packaging System publishers
+pkgin (E) - Package manager for SmartOS, NetBSD, et al.
+pkgng (E) - Package manager for FreeBSD >= 9.0
+pkgutil (E) - Manage CSW-Packages on Solaris
+portage (E) - Package manager for Gentoo
+portinstall (E) - Installing packages from FreeBSD’s ports system
+postgresql_db - Add or remove PostgreSQL databases from a remote host.
+postgresql_ext (E) - Add or remove PostgreSQL extensions from a database.
+postgresql_lang (E) - Adds, removes or changes procedural languages with a PostgreSQL database.
+postgresql_privs - Grant or revoke privileges on PostgreSQL database objects.
+postgresql_user - Adds or removes a users (roles) from a PostgreSQL database.
+profitbricks (E) - Create, destroy, start, stop, and reboot a ProfitBricks virtual machine.
+profitbricks_datacenter (E) - Create or destroy a ProfitBricks Virtual Datacenter.
+profitbricks_nic (E) - Create or Remove a NIC.
+profitbricks_volume (E) - Create or destroy a volume.
+profitbricks_volume_attachments (E) - Attach or detach a volume.
+proxmox (E) - management of instances in Proxmox VE cluster
+proxmox_template (E) - management of OS templates in Proxmox VE cluster
+puppet (E) - Runs puppet
+pushbullet (E) - Sends notifications to Pushbullet
+pushover (E) - Send notifications via u(https://pushover.net)
+quantum_floating_ip (D) - Add/Remove floating IP from an instance
+quantum_floating_ip_associate (D) - Associate or disassociate a particular floating IP with an instance
+quantum_network (D) - Creates/Removes networks from OpenStack
+quantum_router (D) - Create or Remove router from openstack
+quantum_router_gateway (D) - set/unset a gateway interface for the router with the specified external network
+quantum_router_interface (D) - Attach/Dettach a subnet’s interface to a router
+quantum_subnet (D) - Add/remove subnet from a network
+rabbitmq_binding (E) - This module manages rabbitMQ bindings
+rabbitmq_exchange (E) - This module manages rabbitMQ exchanges
+rabbitmq_parameter (E) - Adds or removes parameters to RabbitMQ
+rabbitmq_plugin (E) - Adds or removes plugins to RabbitMQ
+rabbitmq_policy (E) - Manage the state of policies in RabbitMQ.
+rabbitmq_queue (E) - This module manages rabbitMQ queues
+rabbitmq_user (E) - Adds or removes users to RabbitMQ
+rabbitmq_vhost (E) - Manage the state of a virtual host in RabbitMQ
+raw - Executes a low-down and dirty SSH command
+rax - create / delete an instance in Rackspace Public Cloud
+rax_cbs - Manipulate Rackspace Cloud Block Storage Volumes
+rax_cbs_attachments - Manipulate Rackspace Cloud Block Storage Volume Attachments
+rax_cdb - create/delete or resize a Rackspace Cloud Databases instance
+rax_cdb_database - create / delete a database in the Cloud Databases
+rax_cdb_user - create / delete a Rackspace Cloud Database
+rax_clb - create / delete a load balancer in Rackspace Public Cloud
+rax_clb_nodes - add, modify and remove nodes from a Rackspace Cloud Load Balancer
+rax_clb_ssl (E) - Manage SSL termination for a Rackspace Cloud Load Balancer.
+rax_dns - Manage domains on Rackspace Cloud DNS
+rax_dns_record - Manage DNS records on Rackspace Cloud DNS
+rax_facts - Gather facts for Rackspace Cloud Servers
+rax_files - Manipulate Rackspace Cloud Files Containers
+rax_files_objects - Upload, download, and delete objects in Rackspace Cloud Files
+rax_identity - Load Rackspace Cloud Identity
+rax_keypair - Create a keypair for use with Rackspace Cloud Servers
+rax_meta - Manipulate metadata for Rackspace Cloud Servers
+rax_mon_alarm (E) - Create or delete a Rackspace Cloud Monitoring alarm.
+rax_mon_check (E) - Create or delete a Rackspace Cloud Monitoring check for an existing entity.
+rax_mon_entity (E) - Create or delete a Rackspace Cloud Monitoring entity
+rax_mon_notification (E) - Create or delete a Rackspace Cloud Monitoring notification.
+rax_mon_notification_plan (E) - Create or delete a Rackspace Cloud Monitoring notification plan.
+rax_network - create / delete an isolated network in Rackspace Public Cloud
+rax_queue - create / delete a queue in Rackspace Public Cloud
+rax_scaling_group - Manipulate Rackspace Cloud Autoscale Groups
+rax_scaling_policy - Manipulate Rackspace Cloud Autoscale Scaling Policy
+rds - create, delete, or modify an Amazon rds instance
+rds_param_group - manage RDS parameter groups
+rds_subnet_group - manage RDS database subnet groups
+redhat_subscription - Manage Red Hat Network registration and subscriptions using the ``subscription-manager`` command
+redis (E) - Various redis commands, slave and flush
+replace - Replace all instances of a particular string in a file using a back-referenced regular expression.
+rhn_channel - Adds or removes Red Hat software channels
+rhn_register - Manage Red Hat Network registration using the ``rhnreg_ks`` command
+riak (E) - This module handles some common Riak operations
+rollbar_deployment (E) - Notify Rollbar about app deployments
+route53 - add or delete entries in Amazons Route53 DNS service
+route53_health_check (E) - add or delete health-checks in Amazons Route53 DNS service
+route53_zone (E) - add or delete Route53 zones
+rpm_key - Adds or removes a gpg key from the rpm db
+s3 - manage objects in S3.
+s3_bucket (E) - Manage s3 buckets in AWS
+s3_lifecycle (E) - Manage s3 bucket lifecycle rules in AWS
+s3_logging (E) - Manage logging facility of an s3 bucket in AWS
+script - Runs a local script on a remote node after transferring it
+seboolean - Toggles SELinux booleans.
+selinux - Change policy and state of SELinux
+selinux_permissive (E) - Change permissive domain in SELinux policy
+sendgrid (E) - Sends an email with the SendGrid API
+sensu_check (E) - Manage Sensu checks
+seport (E) - Manages SELinux network port type definitions
+service - Manage services.
+set_fact - Set host facts from a task
+setup - Gathers facts about remote hosts
+shell - Execute commands in nodes.
+slack (E) - Send Slack notifications
+slackpkg (E) - Package manager for Slackware >= 12.2
+slurp - Slurps a file from remote nodes
+snmp_facts (E) - Retrive facts for a device using SNMP.
+sns (E) - Send Amazon Simple Notification Service (SNS) messages
+solaris_zone (E) - Manage Solaris zones
+sqs_queue (E) - Creates or deletes AWS SQS queues.
+stackdriver (E) - Send code deploy and annotation events to stackdriver
+stat - retrieve file or file system status
+sts_assume_role (E) - Assume a role using AWS Security Token Service and obtain temporary credentials
+subversion - Deploys a subversion repository.
+supervisorctl - Manage the state of a program or group of programs running via supervisord
+svc (E) - Manage daemontools services.
+svr4pkg (E) - Manage Solaris SVR4 packages
+swdepot (E) - Manage packages with swdepot package manager (HP-UX)
+synchronize - Uses rsync to make synchronizing file paths in your playbooks quick and easy.
+sysctl - Manage entries in sysctl.conf.
+template - Templates a file out to a remote server.
+twilio (E) - Sends a text message to a mobile phone through Twilio.
+typetalk (E) - Send a message to typetalk
+ufw (E) - Manage firewall with UFW
+unarchive - Unpacks an archive after (optionally) copying it from the local machine.
+uptimerobot (E) - Pause and start Uptime Robot monitoring
+uri - Interacts with webservices
+urpmi (E) - Urpmi manager
+user - Manage user accounts
+vca_fw (E) - add remove firewall rules in a gateway in a vca
+vca_nat (E) - add remove nat rules in a gateway in a vca
+vca_vapp (E) - Manages vCloud Air vApp instances.
+vertica_configuration (E) - Updates Vertica configuration parameters.
+vertica_facts (E) - Gathers Vertica database facts.
+vertica_role (E) - Adds or removes Vertica database roles and assigns roles to them.
+vertica_schema (E) - Adds or removes Vertica database schema and roles.
+vertica_user (E) - Adds or removes Vertica database users and assigns roles.
+virt (E) - Manages virtual machines supported by libvirt
+virt_net (E) - Manage libvirt network configuration
+virt_pool (E) - Manage libvirt storage pools
+vmware_cluster (E) - Create VMware vSphere Cluster
+vmware_datacenter (E) - Manage VMware vSphere Datacenters
+vmware_dns_config (E) - Manage VMware ESXi DNS Configuration
+vmware_dvs_host (E) - Add or remove a host from distributed virtual switch
+vmware_dvs_portgroup (E) - Create or remove a Distributed vSwitch portgroup
+vmware_dvswitch (E) - Create or remove a distributed vSwitch
+vmware_host (E) - Add/remove ESXi host to/from vCenter
+vmware_migrate_vmk (E) - Migrate a VMK interface from VSS to VDS
+vmware_portgroup (E) - Create a VMware portgroup
+vmware_target_canonical_facts (E) - Return canonical (NAA) from an ESXi host
+vmware_vm_facts (E) - Return basic facts pertaining to a vSphere virtual machine guest
+vmware_vm_vss_dvs_migrate (E) - Migrates a virtual machine from a standard vswitch to distributed
+vmware_vmkernel (E) - Create a VMware VMkernel Interface
+vmware_vmkernel_ip_config (E) - Configure the VMkernel IP Address
+vmware_vsan_cluster (E) - Configure VSAN clustering on an ESXi host
+vmware_vswitch (E) - Add a VMware Standard Switch to an ESXi host
+vsphere_copy (E) - Copy a file to a vCenter datastore
+vsphere_guest - Create/delete/manage a guest VM through VMware vSphere.
+wait_for - Waits for a condition before continuing.
+webfaction_app (E) - Add or remove applications on a Webfaction host
+webfaction_db (E) - Add or remove a database on Webfaction
+webfaction_domain (E) - Add or remove domains and subdomains on Webfaction
+webfaction_mailbox (E) - Add or remove mailboxes on Webfaction
+webfaction_site (E) - Add or remove a website on a Webfaction host
+win_acl (E) - Set file/directory permissions for a system user or group.
+win_chocolatey (E) - Installs packages using chocolatey
+win_copy - Copies files to remote locations on windows hosts.
+win_dotnet_ngen (E) - Runs ngen to recompile DLLs after .NET updates
+win_environment (E) - Modifies environment variables on windows hosts.
+win_feature - Installs and uninstalls Windows Features
+win_file - Creates, touches or removes files or directories.
+win_firewall_rule (E) - Windows firewall automation
+win_get_url - Fetches a file from a given URL
+win_group - Add and remove local groups
+win_iis_virtualdirectory (E) - Configures a IIS virtual directories.
+win_iis_webapplication (E) - Configures a IIS Web application.
+win_iis_webapppool (E) - Configures a IIS Web Application Pool.
+win_iis_webbinding (E) - Configures a IIS Web site.
+win_iis_website (E) - Configures a IIS Web site.
+win_lineinfile - Ensure a particular line is in a file, or replace an existing line using a back-referenced regular expression.
+win_msi - Installs and uninstalls Windows MSI files
+win_nssm (E) - NSSM - the Non-Sucking Service Manager
+win_package (E) - Installs/Uninstalls a installable package, either from local file system or url
+win_ping - A windows version of the classic ping module.
+win_regedit (E) - Add, Edit, or Remove Registry Keys and Values
+win_scheduled_task (E) - Manage scheduled tasks
+win_service - Manages Windows services
+win_stat - returns information about a Windows file
+win_template - Templates a file out to a remote server.
+win_unzip (E) - Unzips compressed files and archives on the Windows node
+win_updates (E) - Download and install Windows updates
+win_user - Manages local Windows user accounts
+win_webpicmd (E) - Installs packages using Web Platform Installer command-line
+xattr - set/retrieve extended attributes
+xenserver_facts (E) - get facts reported on xenserver
+yum - Manages packages with the *yum* package manager
+zabbix_group (E) - Zabbix host groups creates/deletes
+zabbix_host (E) - Zabbix host creates/updates/deletes
+zabbix_hostmacro (E) - Zabbix host macro creates/updates/deletes
+zabbix_maintenance (E) - Create Zabbix maintenance windows
+zabbix_screen (E) - Zabbix screen creates/updates/deletes
+zfs (E) - Manage zfs
+znode (E) - Create, delete, retrieve, and update znodes using ZooKeeper.
+zypper (E) - Manage packages on SUSE and openSUSE
+zypper_repository (E) - Add and remove Zypper repositories

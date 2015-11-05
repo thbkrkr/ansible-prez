@@ -1,0 +1,12 @@
+---
+
+- name: haproxy | Update cache packages
+  apt: update_cache=yes cache_valid_time=3600
+  tags: update-cache
+
+- name: haproxy | Install haproxy
+  apt: name="haproxy={{ haproxy_version }}" state=present
+  notify: restart haproxy
+
+- name: haproxy | Start haproxy
+  service: name=haproxy state=started

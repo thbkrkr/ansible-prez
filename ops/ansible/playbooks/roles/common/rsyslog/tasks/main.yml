@@ -1,0 +1,27 @@
+---
+- name: rsyslog | Update apt
+  apt: update_cache=yes
+  tags: update_cache
+
+- name: rsyslog | Install rsyslog packages
+  apt: name={{ item }}
+  with_items:
+    - rsyslog-gnutls
+    - rsyslog
+
+- name: rsyslog | Start service
+  service: name=rsyslog state=started
+
+- name: rsyslog | Copy tls pem
+  copy:
+    src=thot.pem
+    dest=/etc/ssl/certs/thot.pem
+    owner=root mode=600
+  notify: restart rsyslog
+
+- name: rsyslog | Copy custom config
+  template:
+    src=xx-custom.conf
+    dest="/etc/rsyslog.d/{{ rsyslog_config_name }}.conf"
+    owner=root mode=644
+  notify: restart rsyslog

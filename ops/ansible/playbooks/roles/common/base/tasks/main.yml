@@ -1,0 +1,31 @@
+---
+
+- name: base | Update cache packages
+  sudo: yes
+  apt: update_cache=yes cache_valid_time=3600
+  tags: update-cache
+
+- name: base | Install base packages
+  apt: name={{ item }} state=present
+  with_items:
+    - ntp
+    - htop
+    - vim
+    - zsh
+    - curl
+    - wget
+    - git
+    - tmux
+    - socat
+    - apt-transport-https
+    - fail2ban
+  tags: base-dependencies
+
+- name: base | Start ntp service
+  service: name=ntp state=started
+
+- name: Base | Set ulimits
+  copy:
+    src=limits.conf dest=/etc/security/limits.conf
+    owner=root mode=644
+  tags: ulimits

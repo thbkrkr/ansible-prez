@@ -1,0 +1,17 @@
+
+[front-servers]
+integ-front-1
+
+[ha-api-servers]
+integ-ha-api-1
+
+[api-servers]
+integ-api-1
+
+[api-servers:vars]
+api_version=2
+
+[all:children]
+front-servers
+ha-api-servers
+api-servers

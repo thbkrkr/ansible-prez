@@ -1,0 +1,20 @@
+---
+
+- name: Api | Run container
+  docker:
+    name: demo-api
+    image: "krkr/demo-api:{{ api_version }}"
+    hostname: "{{ inventory_hostname }}"
+    pull: always
+    state: reloaded
+    expose:
+      - 4242
+    ports: 
+      - 80:4242
+    env:
+      API_VERSION: "{{ api_version }}"
+      ENV: "{{ env }}"
+      IP: "{{ ansible_ssh_host }}"
+      DEPLOYMENT: "{{ ansible_date_time.iso8601 }}"
+    restart_policy: always
+  tags: docker-run

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+export OS_AUTH_URL=https://auth.cloud.ovh.net/v2.0
+
+export OS_TENANT_ID="64e7e7d794c07c1f7************************"
+export OS_TENANT_NAME="2144688********"
+
+export OS_USERNAME="aQJiCj0********"
+export OS_PASSWORD="U88OtWQmwieyzeYsItUgs********************"
+
+export OS_REGION_NAME="GRA1"
